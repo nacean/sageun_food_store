@@ -1,0 +1,19 @@
+.SearchBox {
+    border : 3px solid black;
+    background-color: white;
+    border-radius: 3px;
+    display: block;
+}
+
+.SearchBox input {
+    width: 100%;
+    height: 30px;
+    border : none;
+    background-color: white;
+    font-size: 30px;
+}
+
+.SearchBox input:focus {
+    outline : none;
+}
+

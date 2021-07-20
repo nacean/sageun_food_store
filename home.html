@@ -1,0 +1,412 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css link -->
+    <link rel="stylesheet" href="css/main.css"> 
+    <link rel="stylesheet" href="css/food_content.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/search.css">
+    <title>사근식당</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <!-- secfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+    <!-- gear icon -->
+    <script src="https://kit.fontawesome.com/7390a57766.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class = "main_title">
+        <div class = "head_title">사근식당</div>
+        <div class = "sub_title">사근동에서 무엇을 먹을지 모르시겠나요?</div>
+    </div>
+    
+    
+    <ul class = "main_menu">
+        <li><a href="#">식당 소개</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <div class = "contents">
+    <div class = "SearchBox">
+    <input id = "Search" type="text" placeholder="가게이름 혹은 음식이름 검색" onkeyup = "box_filter(this)" />
+    </div>
+    
+    <div class = "filter">
+        <button><i class="fas fa-cog">필터</i></button>
+        <div class = "hidden_select hidden">
+        <div class = "filter_checkbox">
+            음식종류 : 
+            <label><input type="checkbox" name = "food_type" value = "korean" onchange = "box_filter(this)" />한식</label>
+            <input type="checkbox" name = "food_type" value = "chinese" onchange = "box_filter(this)" />중식
+            <input type="checkbox" name = "food_type" value = "japanese" onchange = "box_filter(this)" />일식
+            <input type="checkbox" name = "food_type" value = "boonsik" onchange = "box_filter(this)" />분식
+            <input type="checkbox" name = "food_type" value = "yasik" onchange = "box_filter(this)" />야식
+            <input type="checkbox" name = "food_type" value = "other" onchange = "box_filter(this)" />기타
+            <input type="checkbox" name = "food_type" value = "all" onchange = "box_filter(this)" />상관없음
+        </div>
+        <div class = "filter_checkbox">
+            상황 : 
+            <input type="checkbox" name = "situation" value = "many" onchange = "box_filter(this)" />여러명
+            <input type="checkbox" name = "situation" value = "alone" onchange = "box_filter(this)" />혼밥
+            <input type="checkbox" name = "situation" value = "wrap" onchange = "box_filter(this)" />포장
+            <input type="checkbox" name = "situation" value = "money" onchange = "box_filter(this)" />가성비
+            <input type="checkbox" name = "situation" value = "speed" onchange = "box_filter(this)" />초스피드
+            <input type="checkbox" name = "situation" value = "soju" onchange = "box_filter(this)" />해장
+            <input type="checkbox" name = "situation" value = "delivery" onchange = "box_filter(this)" />배달
+            <input type="checkbox" name = "situation" value = "all" onchange = "box_filter(this)" />상관없음
+        </div>
+        <div class = "filter_checkbox">
+            맛 : 
+            <input type="checkbox" name = "taste" value = "spicy" onchange = "box_filter(this)" />매콤한
+            <input type="checkbox" name = "taste" value = "hot" onchange = "box_filter(this)" />얼큰한
+            <input type="checkbox" name = "taste" value = "clean" onchange = "box_filter(this)" />담백한
+            <input type="checkbox" name = "taste" value = "greasy" onchange = "box_filter(this)" />기름진
+            <input type="checkbox" name = "taste" value = "all" onchange = "box_filter(this)" />상관없음
+        </div>
+        </div>
+    </div>
+
+    <div class = "introduce">
+        <ul>
+            <li class = "food" id ="ddukbaegi">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >스타뚝배기</li>
+                    <li class = "store_sub">뼈해장국,뼈다귀라면,제육볶음,김치볶음밥 등 다양한 메뉴가 전부 맛있는 집!</li>
+                    <li class = "hashtag">#한식 #해장국 #얼큰 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%8A%A4%ED%83%80%EB%9A%9D%EB%B0%B0%EA%B8%B0/place/1611994356?c=14142307.8117300,4517470.0757125,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="dakeo">
+                <img src="icons/japanese.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >다케오네</li>
+                    <li class = "store_sub">돈카츠,덮밥등이 대표적인 일식집. 이외 고등어구이, 육회비빔밥 등 다양한 메뉴도 판매함!</li>
+                    <li class = "hashtag">#일식 #덮밥 #돈카츠 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EB%8B%A4%EC%BC%80%EC%98%A4%EB%84%A4/place/1806161324?c=14142319.4000890,4517559.8378568,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="one_kki">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >한끼라도 잘먹자</li>
+                    <li class = "store_sub">다양한 메뉴를 파는 집. 순두부찌개+제육볶음을 세트로 시킬 수 있고, 반찬이 다양함!</li>
+                    <li class = "hashtag">#한식 #순두부 #제육 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/entry/place/1518526148?c=14142319.4000890,4517559.8378568,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="soup_villege">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >압구정찌개마을</li>
+                    <li class = "store_sub">김치찌개가 생각날때 방문하는 식당! 1인 찌개도 가능해, 혼밥도 괜찮은 식당</li>
+                    <li class = "hashtag">#한식 #찌개 #해장 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%95%95%EA%B5%AC%EC%A0%95%EC%B0%8C%EA%B0%9C%EB%A7%88%EC%9D%84/place/1904196326?c=14142319.4000890,4517559.8378568,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="soon_dae_guk">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >참진한순대국</li>
+                    <li class = "store_sub">진하고 구수한 국밥집! 순대국밥 이외 수육국밥,등 다양한 메뉴가 존재하고 해장하기 좋은 식당</li>
+                    <li class = "hashtag">#한식 #국밥 #해장</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%B0%B8%EC%A7%84%ED%95%9C%EC%88%9C%EB%8C%80%EA%B5%AD/place/1521522126?c=14142353.1076308,4517562.0145141,15,0,0,0,dh&placePath=%3Fentry%253Dpll">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="three_road">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >삼거리식당</li>
+                    <li class = "store_sub">다양한 메뉴가 있는 백반집. 생선조림 백반이 있어, 생선이 먹고싶을 때 방문하기 좋음</li>
+                    <li class = "hashtag">#한식 #백반 #생선</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%82%BC%EA%B1%B0%EB%A6%AC%EC%8B%9D%EB%8B%B9/place/1194804706?c=14142441.2281397,4517578.8379839,15,0,0,0,dh&placePath=%3Fentry%253Dpll">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="ddabong">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >따봉감자탕</li>
+                    <li class = "store_sub">감자탕이 대표적인 식당! 같이 반주하기도 좋고, 끝나고 볶음밥도 맛있음!</li>
+                    <li class = "hashtag">#한식 #감자탕 #얼큰</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EB%94%B0%EB%B4%89%EA%B0%90%EC%9E%90%ED%83%95/place/1829980135?c=14142475.1471886,4517574.2178464,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="daeseong">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >대성식당</li>
+                    <li class = "store_sub">석쇠불고기가 대표적인 백반집! 부모님, 외부사람등 대접하기 좋은 백반집</li>
+                    <li class = "hashtag">#한식 #백반 #같이</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EB%8C%80%EC%84%B1%EC%8B%9D%EB%8B%B9/place/18774993?c=14142475.1471886,4517574.2178464,15,0,0,0,dh&placePath=%3Fentry%253Dpll">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="banmi">
+                <img src="icons/sandwich.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >반미 3.5</li>
+                    <li class = "store_sub">베트남식 샌드위치 전문점. 닭고기, 등 다양한 재료가 푸짐하게 들어감!</li>
+                    <li class = "hashtag">#샌드위치 #베트남 #간편 #가성비</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EB%B0%98%EB%AF%B8%203.5/place/1364285975?c=14142452.1151859,4517592.5579789,15,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id ="sincham">
+                <img src="icons/tteokbokki.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >신참 떡볶이</li>
+                    <li class = "store_sub">떡볶이가 주된 메뉴. 순대, 주먹밥 등 다양한 메뉴를 파는 곳!</li>
+                    <li class = "hashtag">#분식 #떡볶이 #어묵 #순대</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%8B%A0%EC%B0%B8%EB%96%A1%EB%B3%B6%EC%9D%B4/place/1318992998?c=14142452.1151859,4517592.5579789,15,0,0,0,dh&placePath=%3Fentry%253Dpll">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "kungfu">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >탕화쿵푸 마라탕</li>
+                    <li class = "store_sub">마라탕 맛집! 친구들 여럿이서 오기 좋은 마라탕 집</li>
+                    <li class = "hashtag">#중식 #마라탕 #얼큰 #매콤</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%ED%83%95%ED%99%94%EC%BF%B5%ED%91%B8%EB%A7%88%EB%9D%BC%ED%83%95%2033%ED%98%B8%EC%A0%90/place/1605762893?c=14142675.1994455,4517593.4848165,18,0,0,0,dh&placePath=%3Fentry%253Dpll">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "jongjum_toast">
+                <img src="icons/sandwich.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >종점토스트</li>
+                    <li class = "store_sub">토스트가 먹고 싶으면 가는 집! 굉장히 빨리 나오고 저렴함. 사장님이 굉장히 친절하심</li>
+                    <li class = "hashtag">#토스트 #가성비 #초스피드</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%A2%85%EC%A0%90%ED%86%A0%EC%8A%A4%ED%8A%B8/place/779730457?c=14142812.1001553,4517603.1604438,18,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "sageun_chicken">
+                <img src="icons/chicken.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >사근통닭</li>
+                    <li class = "store_sub">'서울 5대 치킨'에 들어가는 옛날 통닭집. 옛날 통닭 특유의 카레 맛이 굉장히 맛있고, 저렴하고 양 많은 대표적인 치킨집!</li>
+                    <li class = "hashtag">#야식 #치킨 #양많음 #가성비</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EC%82%AC%EA%B7%BC%ED%86%B5%EB%8B%AD/place/1944601754?c=14142812.1001553,4517603.1604438,18,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "bossam_zebok">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >보쌈제복</li>
+                    <li class = "store_sub">보쌈, 갈비 등을 한상으로 먹고싶으면 가는 곳. 1인 보쌈도 있어 혼밥하기도 좋고, 국밥류도 팜!</li>
+                    <li class = "hashtag">#보쌈 #갈비 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://map.naver.com/v5/search/%EC%82%AC%EA%B7%BC%EB%8F%99%20%EB%B3%B4%EC%8C%88%EC%A0%9C%EB%B3%B5/place/1066929669?c=14142812.1001553,4517603.1604438,18,0,0,0,dh">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "country">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >고향식당</li>
+                    <li class = "store_sub">각종 덮밥, 찌개류를 먹고싶으면 무난한집, 할머니집 같은 정서가 느껴지는 곳</li>
+                    <li class = "hashtag">#한식 #덮밥 #찌개</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://weseb.com/SJB/board.php?board=sosangin&command=body&no=112194">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "chef_burger">
+                <img src="icons/dosirak.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >쉐프밥버거</li>
+                    <li class = "store_sub">밥버거가 맛있는 집! 시간이 없다면 쉐프밥버거에서 밥버거로 한끼 든든하게!</li>
+                    <li class = "hashtag">#한식 #밥버거 #빠름 #가성비</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EC%89%90%ED%94%84%EB%B0%A5%EB%B2%84%EA%B1%B0/@37.5611331,127.0458073,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4af07de36f3:0xbe5772960c01dabe!8m2!3d37.5611331!4d127.047996">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "knife_noodle">
+                <img src="icons/noddle.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >명희네손칼국수</li>
+                    <li class = "store_sub">얼큰한 칼국수를 먹고싶을 때 찾는 집</li>
+                    <li class = "hashtag">#한식 #칼국수 #얼큰 #해장</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EB%AA%85%ED%9D%AC%EB%84%A4%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98/@37.5609592,127.0459227,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4afa78441b9:0xa1a7c67a7316b7fe!8m2!3d37.5609592!4d127.0481114">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "kongnamul">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >원조할머니콩나물국밥</li>
+                    <li class = "store_sub">콩나물국밥으로 유명한 식당. 단, 식당이 골목 안쪽에 있기에 잘 못찾을 수 있음!</li>
+                    <li class = "hashtag">#한식 #국밥 #얼큰 #해장</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EC%9B%90%EC%A1%B0%EC%BD%A9%EB%82%98%EB%AC%BC%EA%B5%AD%EB%B0%A5/@37.5603786,127.0462142,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4af9f53f40f:0xfaaf4a439cb0bd23!8m2!3d37.5603786!4d127.0484029">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "pizzarang">
+                <img src="icons/pizza.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >피자랑</li>
+                    <li class = "store_sub">오곡도우로 만든 피자집. 프렌차이즈 피자에 비해 정말 저렴함, 포장만 가능하니 참고</li>
+                    <li class = "hashtag">#야식 #피자 #배달 #같이</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://pizzarang.modoo.at/">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "grandmother">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >할매불백</li>
+                    <li class = "store_sub">불고기 백반으로 한끼 해결하기 무난한 식당</li>
+                    <li class = "hashtag">#한식 #불백 #같이 #혼밥</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%ED%95%A0%EB%A7%A4%EB%B6%88%EB%B0%B1/@37.561239,127.0457527,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4af07b16e71:0xadae0aad8aaa8176!8m2!3d37.561239!4d127.0479414">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "hansot">
+                <img src="icons/dosirak.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >한솥도시락</li>
+                    <li class = "store_sub">간단하고 빠르게 포장해서 먹는 도시락, 저렴하게 빠르게 먹고싶다면 강력 추천!</li>
+                    <li class = "hashtag">#한식 #도시락 #혼밥 #포장</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%ED%95%9C%EC%86%A5%EB%8F%84%EC%8B%9C%EB%9D%BD%ED%95%9C%EC%96%91%EB%8C%80%EA%B8%B0%EC%88%99%EC%82%AC%EC%A0%90/@37.5610851,127.0460981,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4afa89efc7d:0x55835e6750aad83c!8m2!3d37.5610851!4d127.0482868">위치 및 정보</a></li>
+                </ul>
+            </li>
+            
+            <li class = "food" id = "chef">
+                <img src="icons/forks.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >쉐프의 돈까스</li>
+                    <li class = "store_sub">돈까스 전문집. 사근동에서 돈까스가 끌린다면 여기로!</li>
+                    <li class = "hashtag">#분식 #돈까스 #혼밥 #함께</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EC%84%B8%ED%94%84%EC%9D%98%EB%8F%88%EA%B9%8C%EC%8A%A4/@37.5611847,127.0470626,18.56z/data=!4m5!3m4!1s0x357ca4afa8bd6781:0xf553046b99ab3673!8m2!3d37.5610385!4d127.0483379">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "gwizok">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >귀족</li>
+                    <li class = "store_sub">사근동에서 보쌈, 족발이 먹고싶다면 이곳으로!</li>
+                    <li class = "hashtag">#한식 #보쌈 #족발 #함께 #배달</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EA%B7%80%EC%A1%B1/@37.5616251,127.0485602,15z/data=!4m2!3m1!1s0x0:0xadb5a1908bd61042?sa=X&hl=ko&ved=2ahUKEwjCkaeRptvxAhVZyIsBHcTgCykQ_BIwE3oECEYQBQ">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "crazy_padak">
+                <img src="icons/chicken.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >미쳐버린 파닭</li>
+                    <li class = "store_sub">파닭, 후라이드 치킨 등을 파는 곳. 익히 알고있는 파닭 체인점집</li>
+                    <li class = "hashtag">#야식 #치킨 #파닭 #배달</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EB%AF%B8%EC%B3%90%EB%B2%84%EB%A6%B0%ED%8C%8C%EB%8B%AD/@37.5616251,127.0485602,15z/data=!4m2!3m1!1s0x0:0x27c90998b4fae432?sa=X&ved=2ahUKEwjIi5Oup9vxAhUECqYKHT60CkUQ_BIwCnoECDwQBQ">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "daeyeongak">
+                <img src="icons/chinese.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >대연각</li>
+                    <li class = store_sub>사근동 유일 중국집</li>
+                    <li class = "hashtag">#중식 #배달 #자장면 #짬뽕</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EB%8C%80%EC%97%B0%EA%B0%81/@37.5613205,127.0480618,19.14z/data=!4m5!3m4!1s0x357ca4ae5306ebe1:0x91f9370ac8bd9c6d!8m2!3d37.5616251!4d127.0485602?hl=ko">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "hanyangchon">
+                <img src="icons/korean.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >한양촌</li>
+                    <li class = "store_sub">고추장불고기, 순두부찌개, 등 다양한 한식을 먹을 수 있는 식당</li>
+                    <li class = "hashtag">#한식 #가성비 #혼밥 #다양한 메뉴</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%ED%95%9C%EC%96%91%EC%B4%8C/@37.5599146,127.0453813,18.12z/data=!4m5!3m4!1s0x0:0x529405d4d2b9636d!8m2!3d37.5602565!4d127.0467414?hl=ko">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "thaiinplate">
+                <img src="icons/thai.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >타이인플레이트</li>
+                    <li class = store_sub>태국음식집. 가성비가 괜찮고, 맛있음</li>
+                    <li class = "hashtag">#태국 #쌀국수 #팟타이 #푸팟퐁커리</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%ED%83%80%EC%9D%B4%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8/@37.5530866,127.053165,15z/data=!4m9!1m2!2m1!1z7YOA7J207J247ZSM66CI7J207Yq4!3m5!1s0x357ca4af6c304097:0xafe29c98a39a5626!8m2!3d37.5605852!4d127.04721!15sChXtg4DsnbTsnbjtlIzroIjsnbTtirhaGSIX7YOA7J20IOyduCDtlIzroIjsnbTtiriSAQ90aGFpX3Jlc3RhdXJhbnQ?hl=ko">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "minesskitchen">
+                <img src="icons/japanese.jpeg">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >미네스키친</li>
+                    <li class = store_sub>일식집. 돈까스, 카레, 덮밥등이 맛있는 곳. 가격이 조금 있음!</li>
+                    <li class = "hashtag">#일식 #덮밥 #돈까스</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://weseb.com/SJB/board.php?board=sosangin&command=body&no=113928">위치 및 정보</a></li>
+                </ul>
+            </li>
+            <li class = "food" id = "dasiallchicken">
+                <img src="icons/soup.png">
+                <ul class = "food_intro" >
+                    <li class = "store_name" >다시올치킨</li>
+                    <li class = store_sub>닭칼국수가 유명한 집!  치킨도 맛있음</li>
+                    <li class = "hashtag">#치킨 #칼국수 #얼큰한 #국물</li>
+                </ul>
+                <ul class = "tags">
+                    <li class = "location"><a href="https://www.google.com/maps/place/%EB%8B%A4%EC%8B%9C%EC%98%AC%EC%B9%98%ED%82%A8/@37.5604271,127.0445195,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca4af5d5245b9:0xd0e941b88ed1f439!8m2!3d37.5604271!4d127.0467082?hl=ko">위치 및 정보</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- js script -->
+    <script src="js/filter.js"></script>
+    <script src="js/search.js"></script>
+
+</body>
+</html>

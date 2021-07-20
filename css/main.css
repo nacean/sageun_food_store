@@ -1,0 +1,108 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin:0px;
+    padding:0px;
+    color:black;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Gamja Flower', cursive;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin : 0 auto;
+    width: 1000px;
+    background-image : url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/abstract.jpg');
+    background-size : cover;
+}
+
+.contents{
+    animation-name: menu_slide;
+    animation-duration : 4s;
+}
+
+.main_title {
+    margin-top : 60px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.head_title {
+    font-size: 130px;
+    font-weight: 1000;
+    margin-bottom: 100px;
+
+    animation-name: head_slide;
+    animation-duration: 3s;
+    
+}
+
+
+.sub_title {
+    font-size: 30px;
+    font-weight: 600;
+
+    animation-name: head_slide;
+    animation-duration: 5s;
+}
+
+
+@keyfrmaes head_slide {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes head_slide {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes head_slide {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes head_slide {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
