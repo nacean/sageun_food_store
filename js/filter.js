@@ -211,7 +211,7 @@ let filter_situation_list = [];
 let filter_taste_list = [];
 
 //감추는 기능을 위해 document를 받음, hidden은 const로 설정
-const filter_button = document.querySelector(".filter button");
+const filter_button = document.querySelector("#filter button");
 const checkbox_hidden = document.querySelector(".hidden_select");
 const hidden_name = "hidden";
 

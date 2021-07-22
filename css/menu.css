@@ -1,17 +1,15 @@
 
 .main_menu {
-    background-color: white;
-    border: 3px solid black;
     border-radius: 4px;
-    font-size : 25px;
+    font-size : 20px;
     font-weight: 800;
-    margin-bottom: 3px;
+    margin-bottom: 20px;
     display: flex;
 
-    animation-name: menu_slide;
-    animation-duration: 4s;
+    /* animation-name: menu_slide;
+    animation-duration: 4s; */
 }
-
+/* 
 @keyfrmaes menu_slide {
     0% {
         opacity: 0;
@@ -66,33 +64,28 @@
     100% {
         opacity: 1;
     }
-}
+} */
 
 .main_menu li {
-    width : 15%;
+    width : 10%;
     line-height: 50px;
     text-align: center;
+    border-radius: 30px;
+    box-shadow:  10px 10px 20px #9a9a9a,
+             -10px -10px 20px #ffffff;
+}
+
+.store_introduce {
+    margin-right: 20px;
 }
 
 .main_menu a {
-    
-    display: block;
-}
-
-.main_menu a:hover {
-    background-color: skyblue;
-    border : 0.5px solid black;
-    color: white;
-}
-
-.main_menu a:active {
-    background-color: skyblue;
-    border : 0.5px solid black;
     color : black;
+    display: block;
 }
 
 img {
     width: 200px;
     height: 200px;
-    border-right: 3px solid black;
+    border-right: 1px solid rgb(218, 216, 216);
 }

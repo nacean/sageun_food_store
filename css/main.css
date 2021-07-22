@@ -4,9 +4,8 @@
     border-collapse: collapse;
     margin:0px;
     padding:0px;
-    color:black;
-    /* font-family: 'Noto Sans KR', sans-serif; */
-    font-family: 'Gamja Flower', cursive;
+      font-family: 'Noto Sans KR', sans-serif; 
+     /* font-family: 'Do Hyeon', sans-serif;  */
 }
 
 .hidden {
@@ -16,28 +15,28 @@
 body {
     margin : 0 auto;
     width: 1000px;
-    background-image : url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/abstract.jpg');
-    background-size : cover;
+    background-color: rgba(245, 245, 245, 0.842);
 }
 
-.contents{
+ .contents{
     animation-name: menu_slide;
-    animation-duration : 4s;
+    animation-duration : 4s; 
 }
 
 .main_title {
     margin-top : 60px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .head_title {
     font-size: 130px;
-    font-weight: 1000;
-    margin-bottom: 100px;
-
+    font-weight: 900;
+    margin-bottom: 80px;
+    color : white;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
     animation-name: head_slide;
-    animation-duration: 3s;
+    animation-duration: 3s; 
     
 }
 
@@ -45,9 +44,10 @@ body {
 .sub_title {
     font-size: 30px;
     font-weight: 600;
-
+    font-family: 'Gamja Flower', cursive;
+/* 
     animation-name: head_slide;
-    animation-duration: 5s;
+    animation-duration: 5s; */
 }
 
 

@@ -1,16 +1,22 @@
 .SearchBox {
-    border : 3px solid black;
-    background-color: white;
-    border-radius: 3px;
+    height : 50px;
+    border-radius: 8px;
     display: block;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .SearchBox input {
+    padding-left: 10px;
+    padding : auto;
     width: 100%;
-    height: 30px;
+    height: 50px;
     border : none;
-    background-color: white;
-    font-size: 30px;
+    vertical-align: middle;
+    font-size: 25px;
+    background : none;
+    box-shadow:  inset 8px 8px 16px #bfbfbf,
+    inset -8px -8px 16px #ffffff;
 }
 
 .SearchBox input:focus {

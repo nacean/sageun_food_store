@@ -2,20 +2,21 @@
 
 
 .introduce {
-    background-color: white;
-    border-radius: 3px;
+    /* border-radius: 3px;
     animation-name: menu_slide;
-    animation-duration : 4s;
+    animation-duration : 4s; */
 }
 
-.introduce a:hover {
-    color : red;
-}
 
 .food {
-    border: 2px solid black;
     height : 200px;
     display:flex;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  10px 10px 20px #7b7b7b,
+    -10px -10px 20px #ffffff;
+    z-index: 1;
 }
 
 .food_intro{
@@ -25,15 +26,16 @@
 
 
 .store_name {
-    font-size:40px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 900;
     margin-bottom: 35px;
 }
 
 .store_sub{
     font-size : 22px;
-    font-weight: 600;
+    font-weight: 500;
     height : 50px;
+    font-family: 'Gamja Flower', cursive;
 }
 
 .hashtag {
@@ -41,20 +43,33 @@
     font-size: 20px;
     height : 25px;
     margin-top : 35px;
+    font-family: 'Gamja Flower', cursive;
 }
 
 .tags{
     margin-left: auto;
+    text-align: center;
 }
 
 
 .location {
     width : 160px;
+    height : 40px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 900;
     margin-right: 10px;
     margin-top : 150px;
-    border : 2px solid black;
+    background-color: rgba(228, 225, 225, 0.897);
     border-radius: 100px;
-    display:block;
+    display : block;
+}
+
+.location a {
+    color : black;
+    display : block;
+}
+
+.location:hover {
+    background-color: rgba(209, 208, 208, 0.801);
 }
