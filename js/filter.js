@@ -230,7 +230,7 @@ filter_button.addEventListener("click",hidden_reverse);
 
 // 필터 적용하기, 각 체크박스에 box_filter를 onclick_up으로 할당
 function box_filter(target) {
-    
+    target.style.color = "White";
     //check box에 해당하는 요소들을 가져옴
     const value = target.value;
     const name = target.name;

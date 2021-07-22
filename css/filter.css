@@ -44,3 +44,7 @@ input[type="checkbox"] {
 .filter_checkbox label:hover {
     background-color: rgb(209, 207, 207);
 }
+
+.filter_checkbox label {
+    border-radius: 5px;
+}
