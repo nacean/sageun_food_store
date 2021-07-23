@@ -6,10 +6,10 @@
     margin-bottom: 20px;
     display: flex;
 
-    /* animation-name: menu_slide;
-    animation-duration: 4s; */
+     animation-name: menu_slide;
+    animation-duration: 4s; 
 }
-/* 
+
 @keyfrmaes menu_slide {
     0% {
         opacity: 0;
@@ -64,7 +64,7 @@
     100% {
         opacity: 1;
     }
-} */
+} 
 
 .main_menu li {
     width : 10%;
@@ -77,11 +77,15 @@
 
 .store_introduce {
     margin-right: 20px;
+    cursor : pointer;
 }
 
-.main_menu a {
-    color : black;
-    display: block;
+/* #menu_first {
+    background-color: rgb(194, 192, 192);
+}   */
+
+.store_introduce:hover {
+    background-color: rgb(209, 207, 207);
 }
 
 img {

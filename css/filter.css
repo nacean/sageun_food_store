@@ -18,13 +18,22 @@
     margin-bottom: 20px;
     box-shadow:  10px 10px 20px #9a9a9a,
     -10px -10px 20px #ffffff;
+
+    animation-name: head_slide;
+    animation-duration: 0.5s;
 }
 
 .filter_checkbox {
     font-size : 18px;
     padding-bottom: 2px;
     padding-left: 20px;
+    font-weight: 900;
     
+}
+
+label {
+    font-weight : 100;
+    margin-right: 5px;
 }
 
 #filter i:hover {
@@ -47,4 +56,9 @@ input[type="checkbox"] {
 
 .filter_checkbox label {
     border-radius: 5px;
+}
+
+/*만약 클릭시 background color를 설정해줌*/
+.filter_selected {
+    background-color: rgb(209, 207, 207);
 }

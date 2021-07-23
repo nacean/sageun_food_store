@@ -1,0 +1,25 @@
+#about_blah {
+    box-shadow:  10px 10px 20px #7b7b7b,
+    -10px -10px 20px #ffffff;
+    border-radius: 20px;
+    
+}
+
+#about_blah li {
+    font-family: 'Gamja Flower', cursive;
+    font-size : 25px;
+}
+
+#about_blah h3{
+    font-size : 30px;
+}
+
+#about_blah h2{
+    text-align: center;
+    font-weight: 1200;
+    font-size : 28px;
+}
+
+.last_word {
+    text-align: center;
+}

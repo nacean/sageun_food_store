@@ -1,6 +1,55 @@
 //store_list : 음식집 정보를 넣어둠
 const store_list = [
     {
+        store_name : "lalieto",
+        food_type : "other",
+        situation : ["many","wrap","delivery"],
+        taste : ["greasy"],
+        food_list : ["파스","스파게","볶음","필라","리조"]
+    },
+    {
+        store_name : "pachi",
+        food_type : "other",
+        situation : ["many","wrap","delivery","money"],
+        taste : ["greasy"],
+        food_list : ["파스","스파게","볶음","필라","리조"]
+    },
+    {
+        store_name : "jjingddeok",
+        food_type : "boonsik",
+        situation : ["many","wrap","delivery"],
+        taste : ["spicy"],
+        food_list : ["떡볶","오징","튀김","오뎅","어묵"]
+    },
+    {
+        store_name : "road_food",
+        food_type : "chinese",
+        situation : ["many","soju"],
+        taste : ["spicy","hot"],
+        food_list : ["마라"]
+    },
+    {
+        store_name : "bhc",
+        food_type : "yasik",
+        situation : ["many","wrap","delivery"],
+        taste : ["greasy"],
+        food_list : ["치킨","통닭"]
+    },
+    {
+        store_name : "songyuri",
+        food_type : "yasik",
+        situation : ["many","wrap","delivery","money"],
+        taste : ["greasy"],
+        food_list : ["치킨","피자","통닭"]
+    },
+    {
+        store_name : "7_pizza",
+        food_type : "yasik",
+        situation : ["many","wrap","delivery"], 
+        taste : ["greasy"],
+        food_list : ["피자"]
+    },
+    {
         store_name : "hanyangchon",
         food_type : "korean",
         situation : ["alone"],
@@ -124,7 +173,7 @@ const store_list = [
         food_type : "other",
         situation : ["speed","money","wrapd"],
         taste : ["clean"],
-        food_list : ["토스"]
+        food_list : ["토스","샌드"]
     },
     {
         store_name : "kungfu",
@@ -145,7 +194,7 @@ const store_list = [
         food_type : "other",
         situation : ["alone","wrap","money","speed"],
         taste : ["spicy","clean"],
-        food_list : ["반미","토스"]
+        food_list : ["반미","토스","샌드"]
     },
     {
         store_name : "daeseong",
@@ -230,16 +279,29 @@ filter_button.addEventListener("click",hidden_reverse);
 
 // 필터 적용하기, 각 체크박스에 box_filter를 onclick_up으로 할당
 function box_filter(target) {
-    target.style.color = "White";
+
     //check box에 해당하는 요소들을 가져옴
     const value = target.value;
     const name = target.name;
     const IsCheck = target.checked;
-
-    //만약 상관없음이면 함수 실행 X
-    if(value == 'all'){
-        return;
+    
+    //클릭시 backgroundcolor를 바꿔주는 역할, Search중일땐 비활성화
+    if(target.id !== "Search")
+    {
+        
+        const now_label = document.getElementById(value);
+        const filter_selected = "filter_selected";
+        if(now_label.classList.contains(filter_selected)){
+            now_label.classList.remove(filter_selected);
+        }
+        else{
+            now_label.classList.add(filter_selected);
+        }
     }
+    //만약 상관없음이면 함수 실행 X
+    // if(value == 'all'){
+    //     return;
+    // }
 
     //ischeck로 체크한지 안한지 판단, 체크 시 filter_list들에 각각 나누어서 추가
     if(IsCheck == true){

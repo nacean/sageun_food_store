@@ -1,10 +1,11 @@
 
-
+.First_FadeIn {
+    animation-name: menu_slide;
+     animation-duration : 4s;
+}
 
 .introduce {
-    /* border-radius: 3px;
-    animation-name: menu_slide;
-    animation-duration : 4s; */
+     border-radius: 3px;
 }
 
 
@@ -74,3 +75,4 @@
 .location:hover {
     background-color: rgba(209, 208, 208, 0.801);
 }
+

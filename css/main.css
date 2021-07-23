@@ -10,6 +10,13 @@
 
 .hidden {
     display: none;
+    animation-name: head_slide;
+    animation-duration: 5s;
+}
+
+.FadeIn {
+    animation-name: head_slide;
+    animation-duration: 2s;
 }
 
 body {
@@ -45,9 +52,9 @@ body {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Gamja Flower', cursive;
-/* 
+ 
     animation-name: head_slide;
-    animation-duration: 5s; */
+    animation-duration: 5s; 
 }
 
 
