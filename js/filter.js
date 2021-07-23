@@ -1,6 +1,13 @@
 //store_list : 음식집 정보를 넣어둠
 const store_list = [
     {
+        store_name : "hanyang_boonsik",
+        food_type : "boonsik",
+        situation : ["many","alone","money"],
+        taste : ["clean"],
+        food_list : ["라면","김밥","제육"]
+    },
+    {
         store_name : "lalieto",
         food_type : "other",
         situation : ["many","wrap","delivery"],
