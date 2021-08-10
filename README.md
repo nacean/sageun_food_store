@@ -14,7 +14,6 @@
 <br>
 
 ## 사용방법
-<br>
 
 ### 1. 먹고싶은 음식(ex. 치킨) 혹은 가게이름을 검색을 통해 찾을 수 있습니다
 <img src ="https://user-images.githubusercontent.com/36560612/128881504-33a72c3c-cd42-432d-8399-f6570274548e.gif" width = 60%/>
